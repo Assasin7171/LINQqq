@@ -1,4 +1,5 @@
 ﻿using CsvHelper;
+using LINQqq.Person;
 using System.Globalization;
 
 namespace LINQqq
@@ -18,7 +19,70 @@ namespace LINQqq
             //DataSetOperation(googleApps);
             //DataVerification(googleApps);
             //GroupData(googleApps);
-            GroupDataOperations(googleApps);
+            //GroupDataOperations(googleApps);
+
+
+
+
+            //Exercise();
+        }
+
+        private static void Exercise()
+        {
+            var peoples = new List<People>()
+            {
+                new People
+                {
+                    Id = 1,
+                    Name = "Jakub"
+                },
+                new People
+                {
+                    Id= 2,
+                    Name="John"
+                },
+                new People
+                {
+                    Id=3,
+                    Name="Will"
+                },
+                new People
+                {
+                    Id=4,
+                    Name="Bob"
+                }
+            };
+            var addresses = new List<Address>()
+            {
+                new Address
+                {
+                    Id = 1,
+                    PersonId = 1,
+                    Street = "Street1",
+                    City = "City1"
+                },
+                new Address
+                {
+                    Id = 2,
+                    PersonId = 2,
+                    Street = "Street2",
+                    City = "City2"
+                },
+                new Address
+                {
+                    Id = 3,
+                    PersonId = 4,
+                    Street = "Street4a",
+                    City = "City4"
+                },
+                new Address
+                {
+                    Id = 4,
+                    PersonId = 4,
+                    Street = "Street4b",
+                    City = "City4"
+                }
+            };
         }
 
         private static void GroupDataOperations(List<GoogleApp> googleApps)
